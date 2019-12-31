@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="row" style="width: 50%; min-height: 830px;background-color: #00acee;">   
+        <div style="padding-left:30%;padding-top:45%;">
+          <img style="width:40px" src="<%= Routes.static_path(@conn, "/images/logo.png") %>" alt="Phoenix Framework Logo"/>
+            <h1 style="color:white; font-size:50px;font-style: courier"> Twitter Engine</h1>
+        </div>
+    </div>
+    <div style="margin-left:50px;padding-top:3%;">
+        <div class = "row">
+            <h3>UserId: </h3>
+            <input id="username" type="text" name="fname" style="margin-left:10px;">
+            <h3 style="margin-left:10px;">Password: </h3>
+            <input id="password" type="password" name="lname" style="margin-left:10px;">
+            <button id="loginbutton" class="button_white" type="button" onClick="window.login()" style="margin-left:20px;">Login</button>
+        </div>
+        <div style="padding-top:30%;">
+            <h2 style="margin-left: 50%"> Sign Up </h2>
+            <div class = "row">
+                <h3 style="margin-right: 40px;"> UserId: </h3>
+                <input id="registration_userid" type="text" name="fname"><br>
+            </div>
+            <div class = "row">
+                <h3 style="margin-right: 10px;">UserName: </h3>
+                <input id="registration_username" type="text" name="fname"><br>
+            </div>
+            <div class = "row">
+                <h3 style="margin-right: 20px;">Password: </h3>
+                <input id="registration_password" type="password" name="lname"><br>
+            </div>
+            <div class = "row">
+                <button id="registerbutton" type="button" class="button_white" onClick="window.register()" style="margin-left: 50%">Register</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+<div class="row">
+    <div class="row">
+    <img style="width:30px;height:30px;margin-left:3%" src="<%= Routes.static_path(@conn, "/images/logo_blue.png") %>" alt="Phoenix Framework Logo"/>
+        <h4  style="font-weight: bold;">Twitter</h4>
+        <h4 style="font-weight: bold;margin-left:73%">Hi  </h4>
+        <h4 id="username" style="font-weight: bold;margin-left:10px"></h4>
+        <button id="followbutton" class="button_blue" type="button" onClick="window.logout()" style="margin-left:20px">Logout</button>
+    </div>
+</div>
+<div class="row">
+    <div style=" width:13%;margin-right:50px">
+        <ul style="list-style:none; margin-left: 10px;" >
+            <a href="#" onClick="window.homepage()" style="color:white;text-align:center;"><li class="button_blue" style="border-radius:10px;"> Home </li></a>
+            <a href="#" onClick="window.searchquery()" style="color:white;text-align:center;"><li class="button_blue" style="border-radius:10px;"> Query </li></a>
+            <a href="#" onClick="window.usermessage()" style="color:white;text-align:center;"><li class="button_blue" style="border-radius:10px;"> Messages </li></a>
+        </ul>
+        <h4 class="sidebar_text"><b>Follow </b></h4>
+        <div class="row" style="margin-left:10px">
+            <input type="text" id="follow_id" class="form-control rounded-0" style="width: 90%;" placeholder="Search User">
+        </div>
+        <div class="row" style="margin-left:20px">
+            <button id="followbutton" class="button_blue" type="button" onClick="window.follow()" style="padding-bottom: 10px;">Follow</button>
+        </div>
+        <h4 class="sidebar_text"><b>My Followers</b></h4>
+        <div class="row">
+            <ul id='follower-list' style='list-style: none; max-height:400px; padding: 10px;overflow: scroll;width:100%;text-align: center;'></ul>
+        </div>
+    </div>
+    <div class= "row">
+        <div class="form-group" style=" width:20%;border-right: 1px solid black;padding-right:50px; height:750px;" >
+            <h4><b>Create Group: </b></h4>
+            <input type="text" id="creategroupname" class="form-control rounded-0" placeholder="Group Name">
+            <button id="cretegroupbutton" class="button_white" type="button"  onClick="window.creategroup()">Create Group</button>
+            <h4><b>My Groups : </b></h4>
+            <div class="row">
+                <ul id='group-list' style='list-style: none; height:400px; padding: 10px;overflow: scroll;'></ul>
+            </div>
+        </div>
+        <div id="chatwindow" class="form-group" style="width:100%;padding-right:50px;padding-left:20px;display:none" >
+            <div class="row" style="border-bottom: 1px solid black; width: 100%;">
+                <h4><b>Group Name : </b></h4>
+                <h4 id="groupname" style="font-weight: bold;padding-left:10px"></h4>
+                <input type="text" id="member_id" class="form-control rounded-0" style="width:200px;position:absolute;right:15%" placeholder="Username">
+                <button id="add_member" class="button_blue" type="button"  onClick="window.add_group_member()" style="position:absolute;right:3%">Add Member</button>
+            </div>
+            <div class="row">
+                <ul id='message-list' style='list-style: none; max-height:500px; padding: 10px;overflow: scroll;'></ul>
+            </div>
+            <div class="row" style="position:absolute;bottom:15px; width:70%;">
+                <input type="text" id="messagebox" class="form-control rounded-0" placeholder="Write">
+                <button id="addmessage" class="button_blue" type="button" onClick="window.addmessage()">Send</button>
+            </div>
+        </div>
+    </div>
+</div>

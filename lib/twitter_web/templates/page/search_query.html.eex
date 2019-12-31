@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="row">
+    <img style="width:30px;height:30px;margin-left:3%" src="<%= Routes.static_path(@conn, "/images/logo_blue.png") %>" alt="Phoenix Framework Logo"/>
+        <h4  style="font-weight: bold;">Twitter</h4>
+        <h4 style="font-weight: bold;margin-left:73%">Hi  </h4>
+        <h4 id="username" style="font-weight: bold;margin-left:10px"></h4>
+        <button id="followbutton" class="button_blue" type="button" onClick="window.logout()" style="margin-left:20px">Logout</button>
+    </div>
+</div>
+<div class="row">
+    <div style=" width:13%;margin-right:50px">
+        <ul style="list-style:none; margin-left: 10px;" >
+            <a href="#" onClick="window.homepage()" style="color:white;text-align:center;"><li class="button_blue" style="border-radius:10px;"> Home </li></a>
+            <a href="#" onClick="window.searchquery()" style="color:white;text-align:center;"><li class="button_blue" style="border-radius:10px;"> Query </li></a>
+            <a href="#" onClick="window.usermessage()" style="color:white;text-align:center;"><li class="button_blue" style="border-radius:10px;"> Messages </li></a>
+        </ul>
+        <h4 class="sidebar_text"><b>Follow </b></h4>
+        <div class="row" style="margin-left:10px">
+            <input type="text" id="follow_id" class="form-control rounded-0" style="width: 90%;" placeholder="Search User">
+        </div>
+        <div class="row" style="margin-left:20px">
+            <button id="followbutton" class="button_blue" type="button" onClick="window.follow()" style="padding-bottom: 10px;">Follow</button>
+        </div>
+        <h4 class="sidebar_text"><b>My Followers</b></h4>
+        <div class="row">
+            <ul id='follower-list' style='list-style: none; max-height:400px; padding: 10px;overflow: scroll;width:100%;text-align: center;'></ul>
+        </div>
+    </div>
+    <div class= "row">
+        <div class="form-group" style=" width:60%;padding-right:50px" >
+            <input type="text" id="searchbox" class="form-control rounded-0" style="width: 80%;" placeholder="Search Hashtag or User Mentions">
+            <button id="tweetbutton" type="button" class="button_white" onClick="window.getquery()" style="padding-bottom: 40px;">Search</button>
+            <br><br><br>
+            <h4><b>Result : </b></h4>
+            <div class="row">
+                <ul id='result-list' style='list-style: none; max-height:500px; padding: 10px;overflow: scroll;'></ul>
+            </div>
+        </div>
+    </div>
+</div>
